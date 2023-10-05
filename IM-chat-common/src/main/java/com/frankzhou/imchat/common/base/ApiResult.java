@@ -1,12 +1,12 @@
 package com.frankzhou.imchat.common.base;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author: this.FrankZhou
@@ -16,32 +16,38 @@ import java.util.Map;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ApiModel(value = "前端通用返回类")
 public class ApiResult<T> implements Serializable {
     private static final Long serialVersionUID = 1L;
 
     /**
      * 响应数据
      */
+    @ApiModelProperty(value = "返回数据")
     private T data;
 
     /**
      * 响应状态码 200表示ok 其他表示异常
      */
+    @ApiModelProperty(value = "响应码")
     private Integer resultCode;
 
     /**
      * 错误英文描述
      */
+    @ApiModelProperty(value = "错误英文描述")
     private String error;
 
     /**
      * 错误中文描述
      */
+    @ApiModelProperty(value = "错误中文描述")
     private String errorMsg;
 
     /**
      *  是否请求成功
      */
+    @ApiModelProperty(value = "是否成功")
     private Boolean isSuccess;
 
 
