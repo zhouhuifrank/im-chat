@@ -6,5 +6,5 @@ package com.frankzhou.imchat.common.manager;
  * @description
  * @date 2023-10-04
  */
-public class MinIoManager {
+public interface MinIoManager {
 }

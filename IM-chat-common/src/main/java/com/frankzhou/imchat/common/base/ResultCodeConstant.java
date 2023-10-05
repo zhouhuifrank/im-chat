@@ -1,5 +1,7 @@
 package com.frankzhou.imchat.common.base;
 
+import com.baomidou.mybatisplus.extension.api.R;
+
 /**
  * @author: this.FrankZhou
  * @date: 2012/12/27
@@ -59,6 +61,9 @@ public class ResultCodeConstant {
     // 权限错误
 
     public static final ResultCodeDTO NO_AUTH_ERROR = new ResultCodeDTO(801,"no auth error","用户没有权限");
+
+    // 其他错误
+    public static final ResultCodeDTO REDISSON_LOCK_LIMIT = new ResultCodeDTO(1001,"redisson lock limit", "请求过于频繁，请稍后再试!");
 
     ResultCodeConstant() {
     }
